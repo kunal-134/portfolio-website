@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-padding-top: 80px;
+}
+
+
+body {
+  @apply text-gray-100 font-sans scroll-smooth;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+}
+
+:root {
+  --accent: #facc15;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-100;
+}
+
+section {
+  @apply w-full;
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.1); }
+}
+@keyframes float2 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(25px) scale(1.05); }
+}
+@keyframes float3 {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(10deg); }
+}
+@keyframes float4 {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(15px) scale(0.95); }
+}
+
+.animate-float1 { animation: float1 8s ease-in-out infinite; }
+.animate-float2 { animation: float2 10s ease-in-out infinite; }
+.animate-float3 { animation: float3 12s ease-in-out infinite; }
+.animate-float4 { animation: float4 9s ease-in-out infinite; }
+
